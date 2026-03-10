@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import connectDB from './db/db.js';
 import cookieParser from 'cookie-parser';
 import userRoutes from './routes/user.route.js';
+import captainRoutes from './routes/captain.route.js';
 import cors from 'cors';
 
 
@@ -25,5 +26,6 @@ app.get('/', (req, res) => {
 });
 
 app.use('/users', userRoutes);
+app.use('/captains', captainRoutes);
 
 export default app;
